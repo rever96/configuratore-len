@@ -1,0 +1,87 @@
+[
+  {
+    "titolo": "opzione 1",
+    "opzioni": [
+      {
+        "descrizione": "costa 100 euro",
+        "prezzo": 100,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 200 euro",
+        "prezzo": 200,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 300 euro",
+        "prezzo": 300,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  },
+  {
+    "titolo": "opzione 2",
+    "opzioni": [
+      {
+        "descrizione": "costa 10 euro",
+        "prezzo": 10,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 10 euro",
+        "prezzo": 10,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 10 euro",
+        "prezzo": 10,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 10 euro",
+        "prezzo": 10,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  },
+  {
+    "titolo": "opzione 3",
+    "opzioni": [
+      {
+        "descrizione": "costa 100 euro",
+        "prezzo": 100,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 200 euro",
+        "prezzo": 200,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 300 euro",
+        "prezzo": 300,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  },
+  {
+    "titolo": "ultima opzione",
+    "opzioni": [
+      {
+        "descrizione": "costa 100 euro",
+        "prezzo": 100,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 200 euro",
+        "prezzo": 200,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "costa 300 euro",
+        "prezzo": 300,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  }
+]
