@@ -3,6 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { nextPasso, prevPasso } from '../../actions';
 import Headbar from '../headbar/headbar.component';
+import { Card } from 'antd';
+
+const { Meta } = Card;
 
 const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
   console.log(store.getState());
@@ -20,41 +23,44 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
             (accumulator, currentValue) =>
               accumulator + currentValue.opzioneScelta.prezzo,
             0
-          )}
+          )
+          .toString()
+          .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
         totale={totaleDomande}
         indice={++index}
         onPrevClick={() => dispatch(prevPasso())}
       />
-      <section className="section question">
+      <section className='section question'>
         <h2>{domanda.titolo}</h2>
         <div className={'answer-group row-of-' + domanda.opzioni.length}>
           {domanda.opzioni.map((value, key) => {
             return (
-              <Card
+              <div
                 key={key}
-                value={value}
-                onItemClick={() => handleClick(value, domanda.titolo)}
-              />
+                className='col'
+                onClick={() => handleClick(value, domanda.titolo)}
+              >
+                <Card
+                  hoverable
+                  style={{ width: 240 }}
+                  cover={<img alt='example' src='src/assets/img/prova.png' />}
+                >
+                  <Meta
+                    title={value.descrizione}
+                    description={
+                      '€' +
+                      value.prezzo
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+                    }
+                  />
+                </Card>
+              </div>
             );
           })}
         </div>
       </section>
     </>
-  );
-};
-
-const Card = props => {
-  return (
-    <div className="col">
-      <div className="answer js--answer" onClick={() => props.onItemClick()}>
-        <img
-          className="answer-image js--answer-image"
-          src={props.value.immagine}
-          alt={props.value.descrizione}
-        />
-        <span className="answer-text">{props.value.descrizione}</span>
-      </div>
-    </div>
   );
 };
 

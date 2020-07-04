@@ -1,85 +1,130 @@
 [
   {
-    "titolo": "opzione 1",
+    "titolo": "Vuoi vendere sui Social network?",
     "opzioni": [
       {
-        "descrizione": "costa 100 euro",
-        "prezzo": 100,
+        "descrizione": "Si",
+        "prezzo": 1000,
+        "immagine": "./assets/img/prova.png"
+      },
+      {
+        "descrizione": "No",
+        "prezzo": 0,
+        "immagine": "src/assets/img/prova.png"
+      }
+    ]
+  },
+  {
+    "titolo": "Hai già un sito con un dominio? (ad esempio www.miosito.com)",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 0,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 200 euro",
-        "prezzo": 200,
+        "descrizione": "No",
+        "prezzo": 1500,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  },
+  {
+    "titolo": "Hai già un logo?",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 0,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 300 euro",
+        "descrizione": "No",
+        "prezzo": 500,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "Solo una bozza",
         "prezzo": 300,
         "immagine": "answer-1-1.png"
       }
     ]
   },
   {
-    "titolo": "opzione 2",
+    "titolo": "Quanti prodotti vuoi mettere in vendita?",
     "opzioni": [
       {
-        "descrizione": "costa 10 euro",
-        "prezzo": 10,
+        "descrizione": "Da 1 a 10",
+        "prezzo": 2000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 10 euro",
-        "prezzo": 10,
+        "descrizione": "Da 10 a 50",
+        "prezzo": 3500,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 10 euro",
-        "prezzo": 10,
+        "descrizione": "Da 50 a 100",
+        "prezzo": 5000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 10 euro",
-        "prezzo": 10,
+        "descrizione": "Da 100 in su",
+        "prezzo": 10000,
         "immagine": "answer-1-1.png"
       }
     ]
   },
   {
-    "titolo": "opzione 3",
+    "titolo": "Serve la traduzione in altre lingue?",
     "opzioni": [
       {
-        "descrizione": "costa 100 euro",
-        "prezzo": 100,
+        "descrizione": "1 Lingua",
+        "prezzo": 1000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 200 euro",
-        "prezzo": 200,
+        "descrizione": "2 Lingue",
+        "prezzo": 2000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 300 euro",
-        "prezzo": 300,
+        "descrizione": "3 + lingue",
+        "prezzo": 5000,
         "immagine": "answer-1-1.png"
       }
     ]
   },
   {
-    "titolo": "ultima opzione",
+    "titolo": "Vuoi vendere i tuoi prodotti anche sui social?",
     "opzioni": [
       {
-        "descrizione": "costa 100 euro",
-        "prezzo": 100,
+        "descrizione": "Si",
+        "prezzo": 1000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 200 euro",
-        "prezzo": 200,
+        "descrizione": "No",
+        "prezzo": 0,
+        "immagine": "answer-1-1.png"
+      }
+    ]
+  },
+  {
+    "titolo": "Hai bisogno di Seo e indicizzazione? (posizionamento su Google)",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 1000,
         "immagine": "answer-1-1.png"
       },
       {
-        "descrizione": "costa 300 euro",
-        "prezzo": 300,
+        "descrizione": "No",
+        "prezzo": 0,
+        "immagine": "answer-1-1.png"
+      },
+      {
+        "descrizione": "Forse",
+        "prezzo": 500,
         "immagine": "answer-1-1.png"
       }
     ]

@@ -16,16 +16,16 @@ export function Bottonestart() {
   if (index === -1) {
     return (
       <>
-        <img className="intro-image" src="intro.png" alt=""></img>
-        <h1 className="title">
-          Quanto costa sviluppare la mia <strong>app</strong>?
+        <img className='intro-image' src='intro.png' alt=''></img>
+        <h1 className='title'>
+          Quanto costa aprire il tuo <strong>E-commerce</strong>?
         </h1>
-        <p className="subtitle">
-          Calcola rapidamente il costo per creare la tua app, rispondendo a
-          queste semplici domande.
+        <p className='subtitle'>
+          Calcola rapidamente il costo per creare il tuo{' '}
+          <strong>negozio online</strong>, rispondendo a dieci semplici domande.
         </p>
-        <button onClick={start} className="button text-uppercase js--start">
-          Calcolare
+        <button onClick={start} className='button text-uppercase js--start'>
+          Raccontaci
         </button>
       </>
     );
@@ -35,7 +35,7 @@ export function Bottonestart() {
         index={index}
         setIndex={setIndex}
         end={reset}
-        className="Component"
+        className='Component'
       ></Configuratore>
     );
   }
