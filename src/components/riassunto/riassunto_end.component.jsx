@@ -1,9 +1,9 @@
 import React from 'react';
-import './riassunto_end.css';
+import './riassunto_end.scss';
 import { reset } from '../../actions';
 import { connect } from 'react-redux';
 
-import { Form, Input, Button, Col, Row, Typography } from 'antd';
+import { Col, Row, Typography } from 'antd';
 
 const layout = {
   labelCol: { span: 8 },
@@ -26,6 +26,8 @@ const RiassuntoEnd = (props) => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+
+  let placeholder1 = 'Nominativo';
 
   return (
     <>
@@ -52,47 +54,20 @@ const RiassuntoEnd = (props) => {
         </Col>
       </Row>
 
-      <div style={{ backgroundColor: '#ddd' }}>
-        <Form
-          layout='vertical'
-          name='basic'
-          initialValues={{ remember: true }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-        >
-          <Form.Item
-            label='Nominativo'
-            name='username'
-            rules={[{ required: true, message: 'Campo obbligatorio' }]}
-          >
-            <Input width='50%' />
-          </Form.Item>
-
-          <Form.Item
-            label='Email'
-            name='email'
-            rules={[{ required: true, message: 'Campo obbligatorio' }]}
-          >
-            <Input width='50%' />
-          </Form.Item>
-          <Form.Item
-            label='Oggetto'
-            name='object'
-            rules={[{ required: true, message: 'Campo obbligatorio' }]}
-          >
-            <Input width='50%' />
-          </Form.Item>
-
-          <Form.Item label='Contenuto' name='contenuto'>
-            <Input.TextArea></Input.TextArea>
-          </Form.Item>
-
-          <Form.Item {...tailLayout}>
-            <Button type='primary' htmlType='submit'>
-              Contattaci
-            </Button>
-          </Form.Item>
-        </Form>
+      <div className='container'>
+        <form className='form'>
+          <input
+            autoComplete='new-password'
+            type='text'
+            placeholder={placeholder1}
+          />
+          <input autoComplete='new-password' type='text' placeholder='Email' />
+          <input type='text' placeholder='Oggetto' />
+          <textarea placeholder='Contenuto' />
+          <button type='submit' id='login-button'>
+            Contattaci
+          </button>
+        </form>
       </div>
     </>
   );

@@ -3,15 +3,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { nextPasso, prevPasso } from '../../actions';
 import Headbar from '../headbar/headbar.component';
-import { Card } from 'antd';
-
-const { Meta } = Card;
 
 const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
   console.log(store.getState());
   function handleClick(value, titolo) {
+    setTimeout(() => {
+      dispatch(nextPasso(value, titolo));
+    }, 500);
     console.log(value);
-    dispatch(nextPasso(value, titolo));
   }
 
   return (
@@ -35,32 +34,11 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
         <div className={'answer-group row-of-' + domanda.opzioni.length}>
           {domanda.opzioni.map((value, key) => {
             return (
-              <div
+              <Card
                 key={key}
-                className='col'
-                onClick={() => handleClick(value, domanda.titolo)}
-              >
-                <Card
-                  hoverable
-                  style={{ width: 240 }}
-                  cover={
-                    <img
-                      alt='example'
-                      src={require('../../images/' + value.immagine)}
-                    />
-                  }
-                >
-                  <Meta
-                    title={value.descrizione}
-                    description={
-                      '€' +
-                      value.prezzo
-                        .toString()
-                        .replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-                    }
-                  />
-                </Card>
-              </div>
+                value={value}
+                onItemClick={() => handleClick(value, domanda.titolo)}
+              />
             );
           })}
         </div>
@@ -69,4 +47,21 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
   );
 };
 
+const Card = (props) => {
+  return (
+    <div className='col'>
+      <div className='answer js--answer' onClick={() => props.onItemClick()}>
+        <img
+          className='answer-image js--answer-image'
+          src={require('../../images/' + props.value.immagine)}
+          alt={props.value.descrizione}
+        />
+        <span className='answer-text'>{props.value.descrizione}</span>
+        <span className='answer-text'>
+          {props.value.prezzo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+        </span>
+      </div>
+    </div>
+  );
+};
 export default connect()(Passo);
