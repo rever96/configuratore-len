@@ -56,10 +56,14 @@ const Card = (props) => {
           src={require('../../images/' + props.value.immagine)}
           alt={props.value.descrizione}
         />
-        <span className='answer-text'>{props.value.descrizione}</span>
-        <span className='answer-text'>
-          {props.value.prezzo.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-        </span>
+        <div>
+          <div className='answer-text'>{props.value.descrizione}</div>
+          <div className='answer-text'>
+            {props.value.prezzo
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, '.') + '€'}
+          </div>
+        </div>
       </div>
     </div>
   );

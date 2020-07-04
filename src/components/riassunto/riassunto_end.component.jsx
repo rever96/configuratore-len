@@ -1,31 +1,31 @@
 import React from 'react';
 import './riassunto_end.scss';
-import { reset } from '../../actions';
+// import { reset } from '../../actions';
 import { connect } from 'react-redux';
 
 import { Col, Row, Typography } from 'antd';
 
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
-};
+// const layout = {
+//   labelCol: { span: 8 },
+//   wrapperCol: { span: 16 },
+// };
+// const tailLayout = {
+//   wrapperCol: { offset: 8, span: 16 },
+// };
 
 const RiassuntoEnd = (props) => {
-  function ricomincia() {
-    props.end();
-    props.dispatch(reset());
-  }
-  const onFinish = (values) => {
-    console.log('Success:', values);
-    ricomincia();
-  };
+  // function ricomincia() {
+  //   props.end();
+  //   props.dispatch(reset());
+  // }
+  // const onFinish = (values) => {
+  //   console.log('Success:', values);
+  //   ricomincia();
+  // };
 
-  const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-  };
+  // const onFinishFailed = (errorInfo) => {
+  //   console.log('Failed:', errorInfo);
+  // };
 
   let placeholder1 = 'Nominativo';
 
