@@ -3,7 +3,7 @@ import './riassunto_end.css';
 import { reset } from '../../actions';
 import { connect } from 'react-redux';
 
-import { Form, Input, Button, Checkbox, Col, Row, Typography } from 'antd';
+import { Form, Input, Button, Col, Row, Typography } from 'antd';
 
 const layout = {
   labelCol: { span: 8 },
@@ -20,6 +20,7 @@ const RiassuntoEnd = (props) => {
   }
   const onFinish = (values) => {
     console.log('Success:', values);
+    ricomincia();
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -50,57 +51,49 @@ const RiassuntoEnd = (props) => {
           </Typography.Title>
         </Col>
       </Row>
-      <Row style={{ width: '100%' }} justify='center' align='center'>
-        <Col
-          xs={24}
-          sm={24}
-          md={12}
-          lg={12}
-          xl={10}
-          style={{ backgroundColor: '#ddd' }}
+
+      <div style={{ backgroundColor: '#ddd' }}>
+        <Form
+          layout='vertical'
+          name='basic'
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
         >
-          <Form
-            {...layout}
-            name='basic'
-            initialValues={{ remember: true }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+          <Form.Item
+            label='Nominativo'
+            name='username'
+            rules={[{ required: true, message: 'Campo obbligatorio' }]}
           >
-            <Form.Item
-              label='Nominativo'
-              name='username'
-              rules={[{ required: true, message: 'Campo obbligatorio' }]}
-            >
-              <Input width='50%' />
-            </Form.Item>
+            <Input width='50%' />
+          </Form.Item>
 
-            <Form.Item
-              label='Email'
-              name='email'
-              rules={[{ required: true, message: 'Campo obbligatorio' }]}
-            >
-              <Input width='50%' />
-            </Form.Item>
-            <Form.Item
-              label='Oggetto'
-              name='object'
-              rules={[{ required: true, message: 'Campo obbligatorio' }]}
-            >
-              <Input width='50%' />
-            </Form.Item>
+          <Form.Item
+            label='Email'
+            name='email'
+            rules={[{ required: true, message: 'Campo obbligatorio' }]}
+          >
+            <Input width='50%' />
+          </Form.Item>
+          <Form.Item
+            label='Oggetto'
+            name='object'
+            rules={[{ required: true, message: 'Campo obbligatorio' }]}
+          >
+            <Input width='50%' />
+          </Form.Item>
 
-            <Form.Item label='Contenuto' name='contenuto'>
-              <Input.TextArea></Input.TextArea>
-            </Form.Item>
+          <Form.Item label='Contenuto' name='contenuto'>
+            <Input.TextArea></Input.TextArea>
+          </Form.Item>
 
-            <Form.Item {...tailLayout}>
-              <Button type='primary' htmlType='submit'>
-                Contattaci
-              </Button>
-            </Form.Item>
-          </Form>
-        </Col>
-      </Row>
+          <Form.Item {...tailLayout}>
+            <Button type='primary' htmlType='submit'>
+              Contattaci
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     </>
   );
 };

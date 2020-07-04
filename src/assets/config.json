@@ -5,12 +5,12 @@
       {
         "descrizione": "Si",
         "prezzo": 1000,
-        "immagine": "./assets/img/prova.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "No",
         "prezzo": 0,
-        "immagine": "src/assets/img/prova.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -20,12 +20,12 @@
       {
         "descrizione": "Si",
         "prezzo": 0,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "No",
         "prezzo": 1500,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -35,17 +35,17 @@
       {
         "descrizione": "Si",
         "prezzo": 0,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "No",
         "prezzo": 500,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "Solo una bozza",
         "prezzo": 300,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -55,22 +55,22 @@
       {
         "descrizione": "Da 1 a 10",
         "prezzo": 2000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "Da 10 a 50",
         "prezzo": 3500,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "Da 50 a 100",
         "prezzo": 5000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "Da 100 in su",
         "prezzo": 10000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -80,17 +80,17 @@
       {
         "descrizione": "1 Lingua",
         "prezzo": 1000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "2 Lingue",
         "prezzo": 2000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "3 + lingue",
         "prezzo": 5000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -100,12 +100,12 @@
       {
         "descrizione": "Si",
         "prezzo": 1000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "No",
         "prezzo": 0,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   },
@@ -115,17 +115,17 @@
       {
         "descrizione": "Si",
         "prezzo": 1000,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "No",
         "prezzo": 0,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       },
       {
         "descrizione": "Forse",
         "prezzo": 500,
-        "immagine": "answer-1-1.png"
+        "immagine": "prova.png"
       }
     ]
   }

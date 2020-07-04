@@ -45,7 +45,7 @@ code {
     margin-right: auto;
   }
 }
-/*animazioni*/
+
 @-webkit-keyframes sparkle {
   from {
     opacity: 0;

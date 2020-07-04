@@ -43,7 +43,12 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
                 <Card
                   hoverable
                   style={{ width: 240 }}
-                  cover={<img alt='example' src='src/assets/img/prova.png' />}
+                  cover={
+                    <img
+                      alt='example'
+                      src={require('../../images/' + value.immagine)}
+                    />
+                  }
                 >
                   <Meta
                     title={value.descrizione}
