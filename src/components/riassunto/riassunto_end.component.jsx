@@ -3,8 +3,6 @@ import './riassunto_end.scss';
 // import { reset } from '../../actions';
 import { connect } from 'react-redux';
 
-import { Col, Row, Typography } from 'antd';
-
 const RiassuntoEnd = (props) => {
   // function ricomincia() {
   //   props.end();
@@ -23,12 +21,10 @@ const RiassuntoEnd = (props) => {
 
   return (
     <>
-      <Row style={{ width: '100%' }} justify='center' align='top'>
-        <Col>
-          <Typography.Title style={{ color: '#fff' }} level={1}>
-            Completato!
-          </Typography.Title>
-          <Typography.Title style={{ color: '#fff' }} level={2}>
+      <div style={{ width: '100%' }} justify='center' align='top'>
+        <div>
+          <h1 style={{ color: '#fff' }}>Completato!</h1>
+          <h2 style={{ color: '#fff' }}>
             Totale preventivo €{' '}
             {props.store
               .getState()
@@ -39,12 +35,12 @@ const RiassuntoEnd = (props) => {
               )
               .toString()
               .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-          </Typography.Title>
-          <Typography.Title style={{ color: '#fff' }} level={2}>
+          </h2>
+          <h2 style={{ color: '#fff' }} level={2}>
             Contattaci per definire il progetto!
-          </Typography.Title>
-        </Col>
-      </Row>
+          </h2>
+        </div>
+      </div>
 
       <div className='container'>
         <form
