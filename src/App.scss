@@ -1,15 +1,39 @@
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 40vw;
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+input,
+div {
+  z-index: 5;
+}
+
 .App {
   text-align: center;
   font-family: 'Neue', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .App-header {
-  background: #50a3a2;
-  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
-  /* background-color: #3d3935; */
+  // background: #50a3a2;
+  // background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  // background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  // background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  // background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

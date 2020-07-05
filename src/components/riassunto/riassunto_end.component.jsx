@@ -5,14 +5,6 @@ import { connect } from 'react-redux';
 
 import { Col, Row, Typography } from 'antd';
 
-// const layout = {
-//   labelCol: { span: 8 },
-//   wrapperCol: { span: 16 },
-// };
-// const tailLayout = {
-//   wrapperCol: { offset: 8, span: 16 },
-// };
-
 const RiassuntoEnd = (props) => {
   // function ricomincia() {
   //   props.end();
@@ -27,7 +19,7 @@ const RiassuntoEnd = (props) => {
   //   console.log('Failed:', errorInfo);
   // };
 
-  let placeholder1 = 'Nominativo';
+  console.log(props.store.getState());
 
   return (
     <>
@@ -55,15 +47,38 @@ const RiassuntoEnd = (props) => {
       </Row>
 
       <div className='container'>
-        <form className='form'>
+        <form
+          action='mailto:info@infiniteofficine.com'
+          method='post'
+          className='form'
+          encType='text/plain'
+        >
           <input
             autoComplete='new-password'
             type='text'
-            placeholder={placeholder1}
+            placeholder='Nominativo'
+            name='nominativo'
           />
-          <input autoComplete='new-password' type='text' placeholder='Email' />
-          <input type='text' placeholder='Oggetto' />
-          <textarea placeholder='Contenuto' />
+          <input
+            autoComplete='new-password'
+            type='email'
+            name='email'
+            placeholder='Email'
+          />
+          <input type='text' placeholder='Oggetto' name='oggetto' />
+          <input
+            name='configurazione'
+            type='hidden'
+            value={props.store
+              .getState()
+              .map((opzione, key) => {
+                return (
+                  opzione.domanda + ': ' + opzione.opzioneScelta.descrizione
+                );
+              })
+              .toString()}
+          ></input>
+          <textarea placeholder='Contenuto' name='contenuto' />
           <button type='submit' id='login-button'>
             Contattaci
           </button>

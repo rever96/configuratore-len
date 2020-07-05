@@ -3,14 +3,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { nextPasso, prevPasso } from '../../actions';
 import Headbar from '../headbar/headbar.component';
+import Footbar from '../footer/footer';
 
 const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
   console.log(store.getState());
+
+  let optionClicked = false;
+
   function handleClick(value, titolo) {
+    if (optionClicked) {
+      return;
+    }
+    optionClicked = true;
+    console.log(value);
     setTimeout(() => {
+      optionClicked = false;
       dispatch(nextPasso(value, titolo));
     }, 500);
-    console.log(value);
   }
 
   return (
@@ -26,7 +35,7 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
           .toString()
           .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
         totale={totaleDomande}
-        indice={++index}
+        indice={index + 1}
         onPrevClick={() => dispatch(prevPasso())}
       />
       <section className='section question'>
@@ -43,6 +52,7 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
           })}
         </div>
       </section>
+      <Footbar totale={totaleDomande} indice={index}></Footbar>
     </>
   );
 };
