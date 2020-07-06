@@ -16,7 +16,6 @@ export function Bottonestart() {
   if (index === -1) {
     return (
       <>
-        <img className='intro-image' src='intro.png' alt=''></img>
         <h1 className='title'>
           Quanto costa aprire il tuo <strong>E-commerce</strong>?
         </h1>

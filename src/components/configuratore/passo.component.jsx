@@ -6,8 +6,6 @@ import Headbar from '../headbar/headbar.component';
 import Footbar from '../footer/footer';
 
 const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
-  console.log(store.getState());
-
   let optionClicked = false;
 
   function handleClick(value, titolo) {
@@ -15,7 +13,6 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
       return;
     }
     optionClicked = true;
-    console.log(value);
     setTimeout(() => {
       optionClicked = false;
       dispatch(nextPasso(value, titolo));

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import React from 'react';
 
 const Headbar = (props) => {
-  console.log(props);
   return (
     <>
       <div

@@ -9,8 +9,6 @@ const RiassuntoEnd = (props) => {
     props.dispatch(reset());
   }
 
-  console.log(props.store.getState());
-
   return (
     <>
       <div style={{ width: '100%' }} justify='center' align='top'>
