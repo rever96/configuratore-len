@@ -75,6 +75,7 @@
   font-size: 26px;
 }
 .answer {
+  min-width: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,6 +101,22 @@
   transition: transform 0.35s ease, background 0.35s ease,
     -webkit-transform 0.35s ease;
 }
+
+.button {
+  z-index: 5;
+  margin-top: 25px;
+  padding: 10px 15px 10px 15px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 4px solid rgb(0, 199, 0);
+  color: aliceblue;
+}
+
+.button:hover {
+  color: rgb(16, 194, 0);
+  cursor: pointer;
+}
+
 .answer .answer-image {
   width: 60px;
   height: 60px;

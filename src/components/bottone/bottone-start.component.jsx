@@ -24,7 +24,7 @@ export function Bottonestart() {
           Calcola rapidamente il costo per creare il tuo{' '}
           <strong>negozio online</strong>, rispondendo a dieci semplici domande.
         </p>
-        <button onClick={start} className='button text-uppercase js--start'>
+        <button onClick={start} className='button'>
           Raccontaci
         </button>
       </>

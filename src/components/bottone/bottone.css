@@ -25,7 +25,7 @@
   color: #19e706;
 }
 
-.button {
+/* .button {
   position: relative;
   display: inline-block;
   max-width: 100%;
@@ -82,6 +82,21 @@
 .button:hover:after {
   -webkit-animation: sparkle 0.5s normal forwards ease-out;
   animation: sparkle 0.5s normal forwards ease-out;
+} */
+
+.button {
+  z-index: 5;
+  margin-top: 25px;
+  padding: 10px 15px 10px 15px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 4px solid rgb(0, 199, 0);
+  color: aliceblue;
+}
+
+.button:hover {
+  color: rgb(16, 194, 0);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 678px) {

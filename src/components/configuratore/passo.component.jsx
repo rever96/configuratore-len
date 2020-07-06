@@ -60,12 +60,10 @@ const Passo = ({ domanda, dispatch, index, totaleDomande, store }) => {
 const Card = (props) => {
   return (
     <div className='col'>
-      <div className='answer js--answer' onClick={() => props.onItemClick()}>
-        <img
-          className='answer-image js--answer-image'
-          src={require('../../images/' + props.value.immagine)}
-          alt={props.value.descrizione}
-        />
+      <div
+        className='answer js--answer button'
+        onClick={() => props.onItemClick()}
+      >
         <div>
           <div className='answer-text'>{props.value.descrizione}</div>
           <div className='answer-text'>
