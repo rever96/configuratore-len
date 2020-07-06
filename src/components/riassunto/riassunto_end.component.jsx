@@ -1,21 +1,13 @@
 import React from 'react';
 import './riassunto_end.scss';
-// import { reset } from '../../actions';
+import { reset } from '../../actions';
 import { connect } from 'react-redux';
 
 const RiassuntoEnd = (props) => {
-  // function ricomincia() {
-  //   props.end();
-  //   props.dispatch(reset());
-  // }
-  // const onFinish = (values) => {
-  //   console.log('Success:', values);
-  //   ricomincia();
-  // };
-
-  // const onFinishFailed = (errorInfo) => {
-  //   console.log('Failed:', errorInfo);
-  // };
+  function ricomincia() {
+    props.end();
+    props.dispatch(reset());
+  }
 
   console.log(props.store.getState());
 
@@ -25,16 +17,19 @@ const RiassuntoEnd = (props) => {
         <div>
           <h1 style={{ color: '#fff' }}>Completato!</h1>
           <h2 style={{ color: '#fff' }}>
-            Totale preventivo €{' '}
-            {props.store
-              .getState()
-              .reduce(
-                (accumulator, currentValue) =>
-                  accumulator + currentValue.opzioneScelta.prezzo,
-                0
-              )
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+            Totale preventivo{' '}
+            <span style={{ color: '#0f0' }}>
+              €{' '}
+              {props.store
+                .getState()
+                .reduce(
+                  (accumulator, currentValue) =>
+                    accumulator + currentValue.opzioneScelta.prezzo,
+                  0
+                )
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+            </span>
           </h2>
           <h2 style={{ color: '#fff' }} level={2}>
             Contattaci per definire il progetto!
@@ -79,6 +74,11 @@ const RiassuntoEnd = (props) => {
             Contattaci
           </button>
         </form>
+      </div>
+      <div style={{ position: 'absolute', bottom: '30px' }}>
+        <button onClick={ricomincia} className='button'>
+          Ricomincia
+        </button>
       </div>
     </>
   );

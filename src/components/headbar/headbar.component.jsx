@@ -9,7 +9,9 @@ const Headbar = (props) => {
       <span className='center-top '>
         {props.indice} / {props.totale}
       </span>
-      <span className='right-top'>{props.costoTotale} euro</span>
+      <span style={{ color: '#0f0' }} className='right-top'>
+        {props.costoTotale} euro
+      </span>
       <span className='left-top' onClick={() => props.onPrevClick()}>
         {'< indietro'}
       </span>

@@ -110,3 +110,18 @@ form {
     }
   }
 }
+
+.button {
+  z-index: 5;
+  margin-top: 25px;
+  padding: 10px 15px 10px 15px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 4px solid rgb(0, 199, 0);
+  color: aliceblue;
+}
+
+.button:hover {
+  color: rgb(16, 194, 0);
+  cursor: pointer;
+}
