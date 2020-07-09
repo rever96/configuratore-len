@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './bottone.css';
 import { Configuratore } from '../configuratore/configuratore.component';
 
-export function Bottonestart() {
+export function Bottonestart(props) {
   const [index, setIndex] = useState(-1);
   function start() {
     setIndex(0);
@@ -16,15 +16,27 @@ export function Bottonestart() {
   if (index === -1) {
     return (
       <>
-        <h1 className='title'>
+        <div
+          className='logo'
+          style={{
+            backgroundImage: `url(${
+              process.env.PUBLIC_URL + '/assets/images/Copertina__Mano_001.png'
+            })`,
+          }}
+        ></div>
+        <h1 style={{ ...props.impostazioni.textStyle }} className='title'>
           Quanto costa aprire il tuo <strong>E-commerce</strong>?
         </h1>
-        <p className='subtitle'>
-          Calcola rapidamente il costo per creare il tuo{' '}
-          <strong>negozio online</strong>, rispondendo a dieci semplici domande.
+        <p style={{ ...props.impostazioni.textStyle }} className='subtitle'>
+          Crea un preventivo gratuito per il tuo{' '}
+          <strong> negozio online</strong>, seguendo sei semplici passaggi:
         </p>
-        <button onClick={start} className='button'>
-          Raccontaci
+        <button
+          style={{ ...props.impostazioni.textStyle }}
+          onClick={start}
+          className='button'
+        >
+          Inizia ora!
         </button>
       </>
     );
@@ -35,6 +47,7 @@ export function Bottonestart() {
         setIndex={setIndex}
         end={reset}
         className='Component'
+        {...props}
       ></Configuratore>
     );
   }

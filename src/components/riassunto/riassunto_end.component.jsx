@@ -11,10 +11,16 @@ const RiassuntoEnd = (props) => {
 
   return (
     <>
-      <div style={{ width: '100%' }} justify='center' align='top'>
+      <div
+        style={{ width: '100%', ...props.impostazioni.textStyle }}
+        justify='center'
+        align='top'
+      >
         <div>
-          <h1 style={{ color: '#fff' }}>Completato!</h1>
-          <h2 style={{ color: '#fff' }}>
+          <h1 style={{ color: '#fff', ...props.impostazioni.textStyle }}>
+            Completato!
+          </h1>
+          <h2 style={{ color: '#fff', ...props.impostazioni.textStyle }}>
             Totale preventivo{' '}
             <span style={{ color: '#0f0' }}>
               €{' '}
@@ -29,7 +35,10 @@ const RiassuntoEnd = (props) => {
                 .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
             </span>
           </h2>
-          <h2 style={{ color: '#fff' }} level={2}>
+          <h2
+            style={{ color: '#fff', ...props.impostazioni.textStyle }}
+            level={2}
+          >
             Contattaci per definire il progetto!
           </h2>
         </div>
@@ -62,19 +71,33 @@ const RiassuntoEnd = (props) => {
               .getState()
               .map((opzione, key) => {
                 return (
-                  opzione.domanda + ': ' + opzione.opzioneScelta.descrizione
+                  ' - ' +
+                  opzione.domanda +
+                  ': ' +
+                  opzione.opzioneScelta.descrizione +
+                  '\n'
                 );
               })
-              .toString()}
+              .toString()
+              .split(',')
+              .join('')}
           ></input>
           <textarea placeholder='Contenuto' name='contenuto' />
-          <button type='submit' id='login-button'>
+          <button
+            style={{ ...props.impostazioni.textStyle }}
+            type='submit'
+            id='login-button'
+          >
             Contattaci
           </button>
         </form>
       </div>
       <div style={{ position: 'absolute', bottom: '30px' }}>
-        <button onClick={ricomincia} className='button'>
+        <button
+          style={{ ...props.impostazioni.textStyle }}
+          onClick={ricomincia}
+          className='button'
+        >
           Ricomincia
         </button>
       </div>

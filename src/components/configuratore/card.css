@@ -1,3 +1,7 @@
+strong {
+  color: #19e706;
+}
+
 /*Column layout*/
 .row-of-2,
 .row-of-3,
@@ -5,7 +9,6 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -22,9 +25,6 @@
   .row-of-4 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
   }
   .row-of-2 > .col,
   .row-of-3 > .col,
@@ -32,13 +32,10 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 678px) {

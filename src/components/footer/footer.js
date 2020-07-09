@@ -9,7 +9,7 @@ const Headbar = (props) => {
       <div
         style={{
           position: 'absolute',
-          bottom: '10px',
+          bottom: '15%',
           width: '45vw',
           zIndex: '1',
         }}
