@@ -1,0 +1,127 @@
+[
+  {
+    "titolo": "<h2>Hai già un <strong>sito</strong> con un <strong>dominio</strong>?</h2> <br /> (ad esempio www.miosito.com)",
+    "immagine": "Copertina__Mano_002.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 0
+      },
+      {
+        "descrizione": "No",
+        "prezzo": 1500
+      }
+    ]
+  },
+  {
+    "titolo": "<h2>Hai già un <strong>logo</strong>?</h2>",
+    "immagine": "Copertina__Mano_003.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 0,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "No",
+        "prezzo": 500,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "Solo una bozza",
+        "prezzo": 300,
+        "immagine": "prova.png"
+      }
+    ]
+  },
+  {
+    "titolo": "<h2>Quanti <strong>prodotti</strong> vuoi mettere <strong>in vendita</strong>?</h2>",
+    "immagine": "Copertina__Mano_004.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "Da 1 a 10",
+        "prezzo": 2000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "Da 10 a 50",
+        "prezzo": 3500,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "Da 50 a 100",
+        "prezzo": 5000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "Da 100 in su",
+        "prezzo": 10000,
+        "immagine": "prova.png"
+      }
+    ]
+  },
+  {
+    "titolo": "<h2>Serve la traduzione in <strong>altre lingue</strong>?</h2>",
+    "immagine": "Copertina__Mano_005.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "1 Lingua",
+        "prezzo": 1000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "2 Lingue",
+        "prezzo": 2000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "3 + lingue",
+        "prezzo": 5000,
+        "immagine": "prova.png"
+      }
+    ]
+  },
+  {
+    "titolo": "<h2>Vuoi vendere i tuoi prodotti anche <strong>sui social</strong>?</h2>",
+    "immagine": "Copertina__Mano_006.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 1000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "No",
+        "prezzo": 0,
+        "immagine": "prova.png"
+      }
+    ]
+  },
+  {
+    "titolo": "<h2>Hai bisogno di <strong>indicizzazione e SEO</strong>?</h2><br />(posizionamento su <strong>Google</strong>)",
+    "immagine": "Copertina__Mano_007.png",
+    "background": "background.jpg",
+    "opzioni": [
+      {
+        "descrizione": "Si",
+        "prezzo": 1000,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "No",
+        "prezzo": 0,
+        "immagine": "prova.png"
+      },
+      {
+        "descrizione": "Forse",
+        "prezzo": 500,
+        "immagine": "prova.png"
+      }
+    ]
+  }
+]
