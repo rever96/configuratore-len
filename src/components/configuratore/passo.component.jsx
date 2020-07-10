@@ -7,6 +7,7 @@ import Footbar from '../footer/footer';
 import ReactHtmlParser from 'react-html-parser';
 
 const Passo = (props) => {
+  const isMobile = window.innerWidth <= 700;
   const { domanda, dispatch, index, totaleDomande, store } = props;
   let optionClicked = false;
 
@@ -72,24 +73,50 @@ const Passo = (props) => {
         </div>
       </section>
       <Footbar totale={totaleDomande} indice={index}></Footbar>
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '5%',
-          ...props.impostazioni.textStyle,
-        }}
-      >
-        Totale parziale €{' '}
-        {store
-          .getState()
-          .reduce(
-            (accumulator, currentValue) =>
-              accumulator + currentValue.opzioneScelta.prezzo,
-            0
-          )
-          .toString()
-          .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-      </div>
+      {isMobile && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '10px',
+            ...props.impostazioni.textStyle,
+          }}
+        >
+          <div>
+            {' '}
+            {index}/{totaleDomande}{' '}
+          </div>
+          Totale parziale €{' '}
+          {store
+            .getState()
+            .reduce(
+              (accumulator, currentValue) =>
+                accumulator + currentValue.opzioneScelta.prezzo,
+              0
+            )
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+        </div>
+      )}
+      {!isMobile && (
+        <div
+          style={{
+            position: 'absolute',
+            bottom: '5%',
+            ...props.impostazioni.textStyle,
+          }}
+        >
+          Totale parziale €{' '}
+          {store
+            .getState()
+            .reduce(
+              (accumulator, currentValue) =>
+                accumulator + currentValue.opzioneScelta.prezzo,
+              0
+            )
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+        </div>
+      )}
     </>
   );
 };

@@ -1,6 +1,11 @@
 body {
   user-select: none;
 }
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
 
 .section {
   display: -webkit-box;

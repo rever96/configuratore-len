@@ -110,6 +110,7 @@ class RiassuntoEnd extends React.Component {
               <button
                 style={{ ...this.props.impostazioni.textStyle }}
                 type='submit'
+                className='button'
                 id='login-button'
               >
                 Contattaci
@@ -120,21 +121,23 @@ class RiassuntoEnd extends React.Component {
                 style={{ ...this.props.impostazioni.textStyle }}
                 type='submit'
                 id='login-button'
+                className='button'
                 disabled
               >
                 Contattaci
               </button>
             )}
+            <button
+              style={{
+                ...this.props.impostazioni.textStyle,
+                marginLeft: '10px',
+              }}
+              onClick={this.ricomincia}
+              className='button'
+            >
+              Ricomincia
+            </button>
           </form>
-        </div>
-        <div style={{ position: 'absolute', bottom: '30px' }}>
-          <button
-            style={{ ...this.props.impostazioni.textStyle }}
-            onClick={this.ricomincia}
-            className='button'
-          >
-            Ricomincia
-          </button>
         </div>
       </>
     );
