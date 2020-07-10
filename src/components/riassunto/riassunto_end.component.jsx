@@ -10,10 +10,10 @@ class RiassuntoEnd extends React.Component {
       pp: false,
     };
   }
-  ricomincia() {
+  ricomincia = () => {
     this.props.end();
     this.props.dispatch(reset());
-  }
+  };
 
   render() {
     return (
