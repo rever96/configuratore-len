@@ -7,7 +7,7 @@
     "@material-ui/core": "^4.3.2",
     "@types/styled-components": "^4.1.18",
     "form-schema-validation": "^1.17.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-html-parser": "^2.0.2",
@@ -15,7 +15,7 @@
     "react-responsive": "^7.0.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-web-notification": "^0.6.1",
     "redux": "^4.0.4"
   },
